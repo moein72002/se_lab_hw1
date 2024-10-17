@@ -52,3 +52,43 @@ nav ul li a:hover::after {
 .cat-image img:hover {
     transform: scale(1.1);
 }
+
+.login-btn {
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.login-btn:hover {
+    box-shadow: 0 0 10px #32cd32;
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion label {
+    display: block;
+    background-color: #4682b4;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion input:checked ~ .content {
+    max-height: 100px;
+}
