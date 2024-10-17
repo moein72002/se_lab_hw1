@@ -57,3 +57,10 @@ table {
 table, th, td {
     border: 1px solid #333;
 }
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #4682b4;
+    margin: 30px 0;
+}
