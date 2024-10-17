@@ -40,3 +40,20 @@ nav ul li a::after {
 nav ul li a:hover::after {
     display: block;
 }
+
+.cat-table h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
