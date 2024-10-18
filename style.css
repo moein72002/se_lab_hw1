@@ -1,3 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
 header {
     background-color: #4682b4;
     padding: 15px;
@@ -6,7 +13,6 @@ header {
     position: relative;
 }
 
-/* Header Navigation Links */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -41,12 +47,29 @@ nav ul li a:hover::after {
     display: block;
 }
 
-
-.cat-table h2 {
-    font-size: 2em;
-    color: #333;
+.names h2 {
     text-align: center;
     position: relative;
+}
+
+.names-list {
+    counter-reset: cat-counter;
+    list-style: none;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.names-list li {
+    counter-increment: cat-counter;
+    padding: 10px 0;
+    position: relative;
+}
+
+.names-list li::before {
+    content: counter(cat-counter) ". ";
+    font-weight: bold;
+    position: absolute;
+    left: -30px;
 }
 
 table {
@@ -57,6 +80,30 @@ table {
 
 table, th, td {
     border: 1px solid #333;
+}
+
+th {
+    background-color: #4682b4;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+.cat-table h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    position: relative;
 }
 
 .divider {
@@ -116,4 +163,19 @@ table, th, td {
 
 .accordion input:checked ~ .content {
     max-height: 100px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.progress {
+    width: 60%;
+    height: 100%;
+    background-color: #4682b4;
+    border-radius: 10px;
 }
