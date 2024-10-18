@@ -13,7 +13,6 @@ header {
     position: relative;
 }
 
-/* Header Navigation Links */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -51,6 +50,26 @@ nav ul li a:hover::after {
 .names h2 {
     text-align: center;
     position: relative;
+}
+
+.names-list {
+    counter-reset: cat-counter;
+    list-style: none;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.names-list li {
+    counter-increment: cat-counter;
+    padding: 10px 0;
+    position: relative;
+}
+
+.names-list li::before {
+    content: counter(cat-counter) ". ";
+    font-weight: bold;
+    position: absolute;
+    left: -30px;
 }
 
 .cat-table h2 {
